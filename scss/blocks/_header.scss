@@ -1,0 +1,215 @@
+.header {
+    padding: 70px 0 240px;
+    background-image: url(../img/backgrounds/lines.jpg);
+    background-size: contain;
+    background-position: center bottom;
+    background-repeat: repeat;
+}
+
+.header__navigation {
+    border: 1px solid red;
+    margin: 0 auto;
+    padding: 0 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+}
+
+.header__navigation-logo {
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 900;
+        a {
+            color: #000;
+        }
+}
+
+.header__navigation-list {
+    display: flex;
+}
+
+.header__navigation-list-item {
+    margin-right: 80px;
+    position: relative;
+    font-size: 20px;
+    
+        a {
+            font-weight: 700;
+            color: #000;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+                bottom: 0;
+            width: 0;
+            height: 5px;
+            background-color: $yellow-main;
+            transition: all .2s ease-in;
+            z-index: 1;
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
+
+}
+
+.header__navigation-icons {
+    display: flex;
+}
+
+.header__navigation-icon {
+    margin-right: 20px;
+        a {
+            display: block;
+            color: #000;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+}
+
+// HEADER CONTENT 
+.header__content-wrapper {
+    // padding: 153px 0 125px;
+    padding-top: 153px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__content-description {
+    max-width: 585px;
+}
+
+.header__title {
+    margin-bottom: 10px;
+    font-size: 90px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.header__content-description p {
+    margin-bottom: 33px;
+    @include big-paragraph;
+    font-weight: 700;
+}
+
+.header__content-photo {
+    position: relative;
+    padding-top: 26px;
+    max-width: 490px;
+    z-index: 1;
+    img {
+        height: 400px;
+    }
+}
+
+.header__content-photo-back {
+        position: absolute;
+        top: 141px;
+        right: -128px;
+        width: 477px;
+        height: 410px;
+        background-image: -moz-linear-gradient( 90deg, rgb(244,248,249) 0%, rgba(244,248,249,0) 100%);
+        background-image: -webkit-linear-gradient( 90deg, rgb(244,248,249) 0%, rgba(244,248,249,0) 100%);
+        background-image: -ms-linear-gradient( 90deg, rgb(244,248,249) 0%, rgba(244,248,249,0) 100%);
+        opacity: 0.502;
+        z-index: -1;
+}
+
+.header__background {
+    margin: 0 auto;
+    max-width: 1600px;
+    height: 900px;
+    background-image: url(../img/backgrounds/header-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% -100%;
+}
+
+// MY SKILS SECTION 
+
+.header__my-skils-wrapper {
+    // padding-top: 700px;
+    
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.header__my-skils-title {
+    margin-bottom: 33px;
+    @include title-small;
+}
+
+.header__my-skils-lists {
+    padding-left: 39px;
+    margin-bottom: 40px;
+}
+
+.header__my-skils-list {
+    margin-bottom: 3px;
+    position: relative;
+    font-weight: 400;
+    line-height: 1.5;
+    @include big-paragraph;
+        &::after {
+            content: '';
+            position: absolute;
+                top: 17px;
+                left: -30px;
+            width: 24px;
+            height: 2.5px;
+            background-color: #000;
+        }
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+}
+
+.header__my-skils-btn {
+    margin-left: 9px;
+    @include color-btn;
+}
+
+.header__intouch {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.header__intouch-title {
+    margin-bottom: 47px;
+    @include title-small;
+}
+
+.header__intouch-links {
+    margin-bottom: 36px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header__intouch-email {
+    padding-right: 107px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+    text-decoration: underline;
+        &:hover {
+            color: #46b6ec;
+        }
+
+        &:active {
+            color: #f4adaa;
+        }
+}
+
