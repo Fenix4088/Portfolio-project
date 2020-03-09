@@ -80,58 +80,57 @@
 .header__content-wrapper {
     // padding: 153px 0 125px;
     padding-top: 153px;
+    position: relative;
     display: flex;
     justify-content: space-between;
 }
 
 .header__content-description {
+    width: 50%;
     max-width: 585px;
 }
 
 .header__title {
-    margin-bottom: 10px;
+    margin-bottom: 27px;
     font-size: 90px;
     font-weight: 900;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .header__content-description p {
-    margin-bottom: 33px;
+    margin-bottom: 36px;
     @include big-paragraph;
     font-weight: 700;
 }
 
 .header__content-photo {
-    position: relative;
-    padding-top: 26px;
-    max-width: 490px;
-    z-index: 1;
-    img {
-        height: 400px;
-    }
+    // position: relative;
+    width: 41%;
+    max-width: 460px;
+    max-height: 415px;
+    overflow: hidden;
+    z-index: 2;
+
 }
 
 .header__content-photo-back {
         position: absolute;
-        top: 141px;
-        right: -128px;
+        bottom: -145px;
+        right: -139px;
         width: 477px;
         height: 410px;
         background-image: -moz-linear-gradient( 90deg, rgb(244,248,249) 0%, rgba(244,248,249,0) 100%);
         background-image: -webkit-linear-gradient( 90deg, rgb(244,248,249) 0%, rgba(244,248,249,0) 100%);
         background-image: -ms-linear-gradient( 90deg, rgb(244,248,249) 0%, rgba(244,248,249,0) 100%);
         opacity: 0.502;
-        z-index: -1;
+        z-index: 1;
 }
 
-.header__background {
+.header__image {
+    position: relative;
+    margin-top: -70px;
     margin: 0 auto;
     max-width: 1600px;
-    height: 900px;
-    background-image: url(../img/backgrounds/header-bg.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 50% -100%;
 }
 
 // MY SKILS SECTION 
@@ -182,6 +181,7 @@
 }
 
 .header__intouch {
+    padding-right: 96px;
     display: flex;
     flex-flow: column nowrap;
 }
@@ -193,13 +193,10 @@
 
 .header__intouch-links {
     margin-bottom: 36px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+
 }
 
 .header__intouch-email {
-    padding-right: 107px;
     font-size: 24px;
     font-weight: 400;
     color: #000;

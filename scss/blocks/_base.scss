@@ -106,6 +106,12 @@ button {
 }
 
 // HOVERS FOR HEADER ICONS
+.intouch-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .fa-linkedin-in {
     transition: all .2s ease-in;
     &:hover {
@@ -136,12 +142,32 @@ button {
     }
 }
 
-.fa-circle-vk {
-    color: #4d76a1;
+.fa-vk {
+    color: #fff;
 }
 
-.fa-circle-facebook {
+.fa-vk--modify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4d76a1;
+    transition: all .2s ease-in;
+    &:hover {
+        color:#113c69;
+    }
+
+}
+
+.fa-facebook {
+    transition: all .2s ease-in;
     color: #3b5998;
+        &:hover {
+            color: #039be5;
+        }
 }
 // /HOVERS FOR HEADER ICONS
 
