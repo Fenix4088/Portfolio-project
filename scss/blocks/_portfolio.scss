@@ -6,14 +6,13 @@
 
 .portfolio__title{
     margin-bottom: 60px;
-    display: flex;
-    justify-content: center;
     @include title-big;
 }
 
 .portfolio__toggles {
     margin-bottom: 48px;
     display: flex;
+    cursor: pointer;
 }
 
 .portfolio__toggle {
@@ -21,8 +20,13 @@
     font-size: 28px;
     color: rgb(143, 165, 174);
     font-weight: bold;
+    transition: all .2s ease-in;
         &:last-child{
             margin-right: 0;
+        }
+
+        &:hover {
+            color: #000;
         }
 }
 
@@ -39,10 +43,12 @@
 }
 
 .portfolio__project-item-1 {
+    margin-bottom: 16px;
     grid-column: 1/7;
 }
 
 .portfolio__project-item-2 {
+    margin-bottom: 16px;
     grid-column: 7/13;
 }
 
@@ -57,15 +63,17 @@
 }
 
 .portfolio__project-item-5 {
+    margin-bottom: 25px;
     grid-column: 1/5;
-
 }
 
 .portfolio__project-item-6 {
+    margin-bottom: 25px;
     grid-column: 5/9;
 }
 
 .portfolio__project-item-7 {
+    margin-bottom: 25px;
     grid-column: 9/13;
 }
 
@@ -84,21 +92,90 @@
     justify-self: start;
 }
 
+.portfolio__project-img {
+    position: relative;
+    overflow: hidden;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(251, 220, 77, .8);
+            cursor: pointer;
+            transition: all .2s ease-in;
+            z-index: 10;
+        }
+        img {
+            // overflow: hidden;
+        }
+        &:hover::after {
+            top: 0;
+        }
+
+        &:hover .portfolio__project-btn {
+            left: 50%;
+        }
+}
+
+.portfolio__project-btn {
+    padding: 12px 50px;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+    position: absolute;
+        bottom: 50%;
+        left: -50%;
+    border-radius: 30px;
+    color: #ea736d;
+    background-color: rgb(255, 255, 255);
+    transform: translate(-50%, 50%);
+    transition: all .2s ease-in;
+    z-index: 11;
+        &:hover {
+            background-color: $red-main;
+            color: rgba(255, 255, 255, .8);
+        }
+
+        &:active {
+            background-color: #d4423b;
+            color: #fff;
+        }
+}
+
+
+.portfolio__project-title-wrapper {
+    padding-left: 14px;
+}
+
 .portfolio__project-title {
+    margin-bottom: 7px;
     font-size: 32px;
     font-weight: bold;
+    color: #000;
+    transition: all .1s ease-in;
+    &:hover {
+        color: $red-main;
+        text-decoration: underline;
+    }
 }
 
 .portfolio__project-title--small {
+    margin-bottom: 7px;
     font-size: 26px;
+    color: #000;
 }
 
 .portfolio__project-description {
+    margin-bottom: 60px;
     font-size: 22px;
     font-weight: 300;
+
 }
 
 .portfolio__project-description--small {
+    margin-bottom: 0;
     font-size: 20px;
 }
 

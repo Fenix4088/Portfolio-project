@@ -80,6 +80,18 @@ button {
         }
 }
 
+.title-line-middle {
+    position: relative;
+    z-index: 1;
+        &::before {
+            bottom: 16px;
+            right: -5px;
+            left: -5px;
+            height: 12px;
+            @include yellow-subline;
+        }
+}
+
 .title-line-big {
     position: relative;
     z-index: 1;

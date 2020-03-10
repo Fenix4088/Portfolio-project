@@ -68,6 +68,20 @@ button {
     background-color: #fbdc4d;
     z-index: -1; }
 
+.title-line-middle {
+  position: relative;
+  z-index: 1; }
+  .title-line-middle::before {
+    bottom: 16px;
+    right: -5px;
+    left: -5px;
+    height: 12px;
+    content: '';
+    width: 100%;
+    position: absolute;
+    background-color: #fbdc4d;
+    z-index: -1; }
+
 .title-line-big {
   position: relative;
   z-index: 1; }
@@ -451,16 +465,6 @@ button {
 
 .portfolio__title {
   margin-bottom: 60px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   font-size: 64px;
   font-weight: 900;
   line-height: 1.2; }
@@ -471,15 +475,22 @@ button {
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  cursor: pointer; }
 
 .portfolio__toggle {
   margin-right: 80px;
   font-size: 28px;
   color: #8fa5ae;
-  font-weight: bold; }
+  font-weight: bold;
+  -webkit-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  transition: all .2s ease-in; }
   .portfolio__toggle:last-child {
     margin-right: 0; }
+  .portfolio__toggle:hover {
+    color: #000; }
 
 .portfolio__toggle--active {
   color: #000;
@@ -492,9 +503,11 @@ button {
   grid-template-rows: repeat(4); }
 
 .portfolio__project-item-1 {
+  margin-bottom: 16px;
   grid-column: 1/7; }
 
 .portfolio__project-item-2 {
+  margin-bottom: 16px;
   grid-column: 7/13; }
 
 .portfolio__project-item-3 {
@@ -506,12 +519,15 @@ button {
   justify-self: start; }
 
 .portfolio__project-item-5 {
+  margin-bottom: 25px;
   grid-column: 1/5; }
 
 .portfolio__project-item-6 {
+  margin-bottom: 25px;
   grid-column: 5/9; }
 
 .portfolio__project-item-7 {
+  margin-bottom: 25px;
   grid-column: 9/13; }
 
 .portfolio__project-item-8 {
@@ -526,18 +542,86 @@ button {
   grid-column: 9/13;
   justify-self: start; }
 
+.portfolio__project-img {
+  position: relative;
+  overflow: hidden; }
+  .portfolio__project-img::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(251, 220, 77, 0.8);
+    cursor: pointer;
+    -webkit-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    z-index: 10; }
+  .portfolio__project-img:hover::after {
+    top: 0; }
+  .portfolio__project-img:hover .portfolio__project-btn {
+    left: 50%; }
+
+.portfolio__project-btn {
+  padding: 12px 50px;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 50%;
+  left: -50%;
+  -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
+          border-radius: 30px;
+  color: #ea736d;
+  background-color: white;
+  -webkit-transform: translate(-50%, 50%);
+     -moz-transform: translate(-50%, 50%);
+      -ms-transform: translate(-50%, 50%);
+       -o-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  -webkit-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  z-index: 11; }
+  .portfolio__project-btn:hover {
+    background-color: #ea736d;
+    color: rgba(255, 255, 255, 0.8); }
+  .portfolio__project-btn:active {
+    background-color: #d4423b;
+    color: #fff; }
+
+.portfolio__project-title-wrapper {
+  padding-left: 14px; }
+
 .portfolio__project-title {
+  margin-bottom: 7px;
   font-size: 32px;
-  font-weight: bold; }
+  font-weight: bold;
+  color: #000;
+  -webkit-transition: all .1s ease-in;
+  -o-transition: all .1s ease-in;
+  -moz-transition: all .1s ease-in;
+  transition: all .1s ease-in; }
+  .portfolio__project-title:hover {
+    color: #ea736d;
+    text-decoration: underline; }
 
 .portfolio__project-title--small {
-  font-size: 26px; }
+  margin-bottom: 7px;
+  font-size: 26px;
+  color: #000; }
 
 .portfolio__project-description {
+  margin-bottom: 60px;
   font-size: 22px;
   font-weight: 300; }
 
 .portfolio__project-description--small {
+  margin-bottom: 0;
   font-size: 20px; }
 
 /*# sourceMappingURL=main.css.map */
