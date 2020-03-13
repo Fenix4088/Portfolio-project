@@ -1,5 +1,7 @@
 .header {
     padding: 70px 0 240px;
+    margin: 0 auto;
+    max-width: 1600px;
     background-image: url(../img/backgrounds/lines.jpg);
     background-size: contain;
     background-position: center bottom;
@@ -7,7 +9,6 @@
 }
 
 .header__navigation {
-    border: 1px solid red;
     margin: 0 auto;
     padding: 0 110px;
     display: flex;

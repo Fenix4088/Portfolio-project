@@ -1,6 +1,4 @@
-// font-family: 'M PLUS 1p', sans-serif;
-// font-family: 'Roboto', sans-serif;
-// COMMON STYLES 
+
 *,
 *::after,
 *::before {
@@ -59,18 +57,21 @@ button {
     cursor: pointer;
 }
 
+textarea {
+    resize: none;
+}
+
 // /COMMON STYLES
 
 .container {
     margin: 0 auto;
     max-width: 1140px;
-    border: 1px solid red;
+    // border: 1px solid red;
 }
 
 .sub-container {
     margin: 0 auto;
     max-width: 1005px;
-    border: 1px solid blue;
 }
 
 // YELLOW LINES UNDER TITELS 
