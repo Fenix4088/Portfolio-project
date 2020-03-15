@@ -15,22 +15,24 @@
     <body>
         <header class="header">
             <nav class="header__navigation">
-
                 <div class="header__navigation-logo">
                     <span class="title-line">
                         <a href="./index.html">YP</a>
                     </span>
+                    
                 </div>
-
+                <!-- BURGER MENUE  -->
+                <span class="header__burger"></span>
+                <!-- //BURGER MENUE  -->
                 <ul class="header__navigation-list">
                     <li class="header__navigation-list-item active">
                         <a href="#" class="active">Main</a>
                     </li>
                     <li class="header__navigation-list-item">
-                        <a href="#">Projects</a>
+                        <a href="./pages/projects-page.html">Projects</a>
                     </li>
                     <li class="header__navigation-list-item">
-                        <a href="#">Contact</a>
+                        <a href="./pages/contacts-page.html">Contact</a>
                     </li>
                 </ul>
 
@@ -54,8 +56,8 @@
 
             </nav>
 
-            <div class="container">
-                <div class="header__content-wrapper">
+            <div class="container none">
+                <div class="header__content-wrapper none">
                     <div class="header__content-description">
                         <h1 class="header__title">
                             <span class="title-line-big">Yehor</span><br>
@@ -63,8 +65,8 @@
                         </h1>
                         <p>Front-end developer.<br>Works fast in compliance with deadlines and technical specifications.</p>
                         <div class="header__btn-container">
-                            <a href="#" class="color-btn">About me</a>
-                            <a href="#" class="colorless-btn">Contacts</a>
+                            <a href="#aboutMe" class="color-btn">About me</a>
+                            <a href="./pages/contacts-page.html" class="colorless-btn">Contacts</a>
                         </div>
                     </div>
 
@@ -77,20 +79,20 @@
                 </div>
             </div>
 
-            <div class="header__image">
+            <div class="header__image none">
                 <img src="./img/backgrounds/header-bg.png" alt="Computer imag">
             </div>
 
-            <div class="container">
+            <div class="container none">
                 <section class="header__my-skils-wrapper">
                     <div class="header__my-skils">
-                        <h3 class="header__my-skils-title">My skills:</h3>
+                        <h3 class="header__my-skils-title" id="aboutMe">My skills:</h3>
                         <ul class="header__my-skils-lists">
                             <li class="header__my-skils-list">
                                 pixel perfect, acording to layout
                             </li>
                             <li class="header__my-skils-list">
-                                Responsive and Adaptive web design
+                                responsive and adaptive web design
                             </li>
                             <li class="header__my-skils-list">
                                 retina screens optimisation
@@ -102,7 +104,7 @@
                                 use grids for making flexible pages
                             </li>
                         </ul>
-                        <a href="#" class="header__my-skils-btn">My projects</a>
+                        <a href="./pages/projects-page.html" class="header__my-skils-btn">My projects</a>
                     </div>
     
                     <div class="header__intouch">
@@ -133,7 +135,7 @@
 
         </header>
 
-        <main>
+        <main class="">
             <section class="portfolio">
 
                 <div class="container">
@@ -151,11 +153,11 @@
                     <div class="portfolio__projects-wrapper">
                         <div class="portfolio__project-item-1 portfolio__project-img">
                             <img src="./img/portfolio/forest-travel-wallpaper.jpg" alt="forest travel photo">
-                            <a href="#" class="portfolio__project-btn">View</a>
+                            <a href="#" class="portfolio__project-btn portfolio__project-btn--big">View</a>
                         </div>
                         <div class="portfolio__project-item-2 portfolio__project-img">
                             <img src="./img/portfolio/dream-wallpaper.jpg" alt="dream psd photo">
-                            <a href="#" class="portfolio__project-btn">View</a>
+                            <a href="#" class="portfolio__project-btn portfolio__project-btn--big">View</a>
                         </div>
                         <div class="portfolio__project-item-3">
                             <div class="portfolio__project-title-wrapper">
@@ -294,28 +296,30 @@
                                 If you are looking for professional of front-end developing to your team or you need a developer for your own project - give me to know.
                             </p>
                             <div class="contacts__contact-wrapper">
-                                <ul class="contacts__contact-type">
-                                    <li>Email</li>
-                                    <li>Skype</li>
-                                    <li>Phone</li>
-                                    <li>Adres</li>
-                                </ul>
-                                <ul class="contacts__contact-data">
+                                <ul class="contacts__contact-list">
                                     <li>
-                                        <a href="mailto:fenix4088@gmail.com">fenix4088@gmail.com</a>
+                                        <span class="contacts__contact-type">Email</span> 
+                                        <span class="contacts__contact-data">
+                                            <a href="mailto:fenix4088@gmail.com">fenix4088@gmail.com</a>
+                                        </span>
                                     </li>
                                     <li>
-                                        <a href="skype:egor1991_zp?add">egor1991_zp</a>
+                                        <span class="contacts__contact-type">Skype</span> 
+                                        <span class="contacts__contact-data">
+                                            <a href="skype:egor1991_zp?add">egor1991_zp</a>
+                                        </span>
                                     </li>
                                     <li>
-                                        +4 (80) 729-233-897
+                                        <span class="contacts__contact-type">Phone</span> 
+                                        <span class="contacts__contact-data">+4 (80) 729-233-897</span>
                                     </li>
                                     <li>
-                                        Poland, Wroclaw
+                                        <span class="contacts__contact-type">Addres</span>
+                                        <span class="contacts__contact-data">Poland, Wroclaw</span>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="contacts__contact-icons intouch-block">
+                            <div class="intouch-block">
                                 <a href="https://github.com/Fenix4088?tab=repositories" target="_blank">
                                     <i class="fab fa-github fa-3x"></i>
                                 </a>
@@ -360,7 +364,7 @@
             </section>
         </main>
 
-        <footer class="footer">
+        <footer class="footer none">
             <div class="container">
                 <div class="footer__devName">&copy;&nbsp;2020 - Yehor Pliasov</div>
                 <p>Web developer from Zaporozhue, creating webpages - my passion.</p>

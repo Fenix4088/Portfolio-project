@@ -36,9 +36,19 @@
             content: '';
             position: absolute;
             left: 0;
-            top: 60px;
-            bottom: -28px;
+            top: 68px;
+            bottom: -18px;
             width: 4px;
+            background-color: rgb(225, 238, 244);
+        }
+
+        &:first-child::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -106px;
+            width: 4px;
+            height: 57px;
             background-color: rgb(225, 238, 244);
         }
 

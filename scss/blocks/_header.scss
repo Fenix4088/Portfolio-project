@@ -18,6 +18,7 @@
 }
 
 .header__navigation-logo {
+    display: flex;
     font-size: 42px;
     line-height: 1.2;
     font-weight: 900;
@@ -26,8 +27,44 @@
         }
 }
 
+.header__burger {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    &::after, &::before {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 4px;
+        background-color: #000;
+    }
+    &::after {
+        bottom: 10px;
+    }
+    &::before {
+        top: 10px;
+    }
+
+    @media (min-width: 768px) {
+
+    }
+    
+    @media (min-width: 1200px) {
+        display: none;
+    }
+}
+
 .header__navigation-list {
-    display: flex;
+    display: none;
+    @media (min-width: 768px) {
+
+    }
+    
+    @media (min-width: 1200px) {
+        display: flex; 
+    }
 }
 
 .header__navigation-list-item {
@@ -62,8 +99,17 @@
 }
 
 .header__navigation-icons {
-    display: flex;
+    display: none;
+
+    @media (min-width: 768px) {
+
+    }
+    
+    @media (min-width: 1200px) {
+        display: flex;
+    }
 }
+
 
 .header__navigation-icon {
     margin-right: 20px;
@@ -100,6 +146,7 @@
 
 .header__content-description p {
     margin-bottom: 36px;
+    max-width: 54ch;
     @include big-paragraph;
     font-weight: 700;
 }
@@ -137,26 +184,21 @@
 // MY SKILS SECTION 
 
 .header__my-skils-wrapper {
-    // padding-top: 700px;
-    
     display: flex;
     justify-content: space-between;
-
-
 }
 
 .header__my-skils-title {
-    margin-bottom: 33px;
+    margin-bottom: 35px;
     @include title-small;
 }
 
 .header__my-skils-lists {
-    padding-left: 39px;
     margin-bottom: 40px;
 }
 
 .header__my-skils-list {
-    margin-bottom: 3px;
+    padding-left: 30px;
     position: relative;
     font-weight: 400;
     line-height: 1.5;
@@ -165,7 +207,7 @@
             content: '';
             position: absolute;
                 top: 17px;
-                left: -30px;
+                left: 0;
             width: 24px;
             height: 2.5px;
             background-color: #000;
@@ -177,24 +219,23 @@
 }
 
 .header__my-skils-btn {
-    margin-left: 9px;
     @include color-btn;
 }
 
 .header__intouch {
-    padding-right: 96px;
+    width: 33%;
+    max-width: 360px;
     display: flex;
     flex-flow: column nowrap;
 }
 
 .header__intouch-title {
-    margin-bottom: 47px;
+    margin-bottom: 35px;
     @include title-small;
 }
 
 .header__intouch-links {
-    margin-bottom: 36px;
-
+    margin-bottom: 15px;
 }
 
 .header__intouch-email {

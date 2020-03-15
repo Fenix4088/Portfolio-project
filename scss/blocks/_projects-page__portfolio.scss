@@ -1,0 +1,77 @@
+.portfolio--bg-white {
+    background-color: #fff;
+}
+
+.portfolio__title--center {
+    text-align: center;
+}
+
+.portfolio__projects-wrapper--projects {
+    grid-template-columns: repeat(12, 8.33%);
+    grid-template-rows: repeat(6);
+}
+
+.portfolio__project-item-8--projects {
+    margin-bottom: 65px;
+}
+
+.portfolio__project-item-11 {
+    margin-bottom: 25px;
+    grid-column: 1/5;
+}
+
+.portfolio__project-item-12 {
+    margin-bottom: 25px;
+    grid-column: 5/9;
+}
+
+.portfolio__project-item-13 {
+    margin-bottom: 25px;
+    grid-column: 9/13;
+}
+
+.portfolio__project-item-14 {
+    margin-bottom: 65px;
+    grid-column: 1/5;
+    justify-self: start;
+}
+
+.portfolio__project-item-15 {
+    grid-column: 5/9;
+    justify-self: start;
+}
+
+.portfolio__project-item-16 {
+    grid-column: 9/13;
+    justify-self: start;
+}
+.portfolio__project-item-17 {
+    margin-bottom: 25px;
+    grid-column: 1/5;
+}
+
+.portfolio__project-item-18 {
+    margin-bottom: 25px;
+    grid-column: 5/9;
+}
+
+.portfolio__project-item-19 {
+    margin-bottom: 25px;
+    grid-column: 9/13;
+}
+
+.portfolio__project-item-20 {
+    grid-column: 1/5;
+    justify-self: start;
+}
+
+.portfolio__project-item-21 {
+    grid-column: 5/9;
+    justify-self: start;
+}
+
+.portfolio__project-item-22 {
+    grid-column: 9/13;
+    justify-self: start;
+}
+

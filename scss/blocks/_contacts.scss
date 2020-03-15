@@ -14,8 +14,6 @@
 }
 
 .contacts__wrapper {
-
-    font-size: 20px; 
     max-width: 1600px;
     display: flex;
     justify-content: space-between;
@@ -24,8 +22,10 @@
 .contacts__contact-details {
     position: relative;
     width: 43.8%;
+    z-index: 2;
     p {
         margin-bottom: 45px;
+        font-size: 20px; 
         line-height: 1.6;
         font-weight: 400;
 
@@ -36,22 +36,21 @@
     position: absolute;
     top: -16px;
     left: -354px;
+    user-select: none;
+    z-index: -1;
 }
   
 .contacts__contact-wrapper {
     margin-bottom: 40px;
-    display: flex;
-    justify-content: space-between;
+    font-size: 20px; 
 }
 
-.contacts__contact-type {
-    margin-right: 90px;
+.contacts__contact-list {
     font-weight: bold;
     line-height: 1.2;
 }
-
-.contacts__contact-data li,  
-.contacts__contact-type li {
+  
+.contacts__contact-list li {
     margin-bottom: 27px;
 
     &:last-child {
@@ -59,18 +58,24 @@
     }
 }
 
+.contacts__contact-type {
+    display: inline-block;
+    min-width: 100px;
+    margin-right: 90px;
+}
+
 .contacts__contact-data {
+    display: inline-block;
     line-height: 1.2;
 }
 
-.contacts__contact-data li > a {
+.contacts__contact-data  > a {
     color: rgb(3, 155, 229);
 }
 
-.contacts__contact-data > li{
+.contacts__contact-data {
     font-weight: 500;
     color: rgb(150, 150, 157);
-
 }
 
 .contacts__contact-icons {
@@ -79,6 +84,7 @@
 
 .contacts__form {
     padding: 55px 60px 40px;
+    font-size: 20px; 
     width: 45%;
     box-shadow: 0px 28px 100px 0px rgba(194, 219, 235, 1);
     background-color: #fff;

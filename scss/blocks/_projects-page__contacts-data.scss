@@ -1,0 +1,35 @@
+.contacts-data {
+    padding: 160px 0 460px;
+    font-family: "Roboto";
+    color: rgb(22, 22, 22);
+    background-image: url(../img/backgrounds/projects-page-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contacts-data__wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts-data__title {
+    margin-bottom: 30px;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.contacts-data__link {
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: 300;
+    a {
+        text-decoration: underline;
+        color: #4398e8;
+        &:active {
+            color: $red-main;
+        }
+    }
+}
