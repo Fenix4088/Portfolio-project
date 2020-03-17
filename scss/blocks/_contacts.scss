@@ -1,7 +1,10 @@
 .contacts {
     padding: 145px 0;
     margin: 0 auto;
-    background-color: #f4f8f9;
+    background-image: url(../img/backgrounds/bg-contacts-lines-4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .contacts__title {
@@ -20,6 +23,7 @@
 }
 
 .contacts__contact-details {
+    padding-top: 15px;
     position: relative;
     width: 43.8%;
     z-index: 2;
@@ -71,11 +75,22 @@
 
 .contacts__contact-data  > a {
     color: rgb(3, 155, 229);
+    transition: all .2s ease-in;
+    &:hover {
+        color: rgb(22, 92, 128);
+    }
 }
 
 .contacts__contact-data {
     font-weight: 500;
     color: rgb(150, 150, 157);
+}
+
+.phone {
+    color: rgb(150, 150, 157) !important;
+    &:hover {
+        color: rgb(22, 92, 128) !important;
+    }
 }
 
 .contacts__contact-icons {
@@ -137,6 +152,7 @@
     color: rgb(188, 188, 188);
     font-weight: bold;
     transition: all, .2s ease-in;
+    pointer-events: none;
 }
 
  

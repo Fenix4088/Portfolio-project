@@ -10,10 +10,26 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
         <!-- STYLES -->
         <link rel="stylesheet" href="./css/main.css">
+        <!-- FAVICON  -->
+        <link rel="shortcut icon" href="./img/backgrounds/favicon.png" type="image/x-icon">
         <title>Portfolio project | Main page</title>
     </head>
     <body>
-        <header class="header">
+        <ul id="page-nav">
+            <li class="active">
+                <a href="#header"></a>
+            </li>
+            <li>
+                <a href="#portfolio"></a>
+            </li>
+            <li>
+                <a href="#how-it-work"></a>
+            </li>
+            <li>
+                <a href="#contacts"></a>
+            </li>
+        </ul>
+        <header class="header" id="header">
             <nav class="header__navigation">
                 <div class="header__navigation-logo">
                     <span class="title-line">
@@ -25,8 +41,8 @@
                 <span class="header__burger"></span>
                 <!-- //BURGER MENUE  -->
                 <ul class="header__navigation-list">
-                    <li class="header__navigation-list-item active">
-                        <a href="#" class="active">Main</a>
+                    <li class="header__navigation-list-item">
+                        <a href="#" class="active-page">Main</a>
                     </li>
                     <li class="header__navigation-list-item">
                         <a href="./pages/projects-page.html">Projects</a>
@@ -136,7 +152,7 @@
         </header>
 
         <main>
-            <section class="portfolio">
+            <section class="portfolio" id="portfolio">
 
                 <div class="container">
                     <h2 class="portfolio__title">
@@ -144,70 +160,79 @@
                     </h2>
     
                     <div class="portfolio__toggles">
-                        <div class="portfolio__toggle portfolio__toggle--active">All projects</div>
-                        <div class="portfolio__toggle">Bootstrap</div>
-                        <div class="portfolio__toggle">WordPress</div>
-                        <div class="portfolio__toggle">Frontend</div>
+                        <div class="portfolio__toggle portfolio__toggle--active filter" data-filter="all">All projects</div>
+                        <div class="portfolio__toggle filter" data-filter=".boot">Bootstrap</div>
+                        <div class="portfolio__toggle filter" data-filter=".wp">WordPress</div>
+                        <div class="portfolio__toggle filter" data-filter=".front">Frontend</div>
                     </div>
     
-                    <div class="portfolio__projects-wrapper">
-                        <div class="portfolio__project-item-1 portfolio__project-img">
-                            <img src="./img/portfolio/forest-travel-wallpaper.jpg" alt="forest travel photo">
-                            <a href="#" class="portfolio__project-btn portfolio__project-btn--big">View</a>
-                        </div>
-                        <div class="portfolio__project-item-2 portfolio__project-img">
-                            <img src="./img/portfolio/dream-wallpaper.jpg" alt="dream psd photo">
-                            <a href="#" class="portfolio__project-btn portfolio__project-btn--big">View</a>
-                        </div>
-                        <div class="portfolio__project-item-3">
-                            <div class="portfolio__project-title-wrapper">
-                                <a href="#" class="portfolio__project-title">Project "Forest travel"</a>
-                                <div class="portfolio__project-description">Multi-page project</div>
+                    <div class="portfolio__projects-wrapper" id="portfolio-project-filter">
+                        <div class="portfolio__card portfolio__card--big">
+                            <div class="portfolio__project-img">
+                                <img src="./img/portfolio/forest-travel-wallpaper.jpg" alt="forest travel photo">
+                                <a href="#" class="portfolio__project-btn portfolio__project-btn--big">View</a>
+                            </div>
+                            <div class="portfolio__project-desk">
+                                <div class="portfolio__project-title-wrapper">
+                                    <a href="#" class="portfolio__project-title">Project "Forest travel"</a>
+                                    <div class="portfolio__project-description">Multi-page project</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="portfolio__project-item-4">
-                            <div class="portfolio__project-title-wrapper">
-                                <a href="#" class="portfolio__project-title">Project "Dream"</a>
-                                <div class="portfolio__project-description">Multi-page project</div>
+                        <div class="portfolio__card portfolio__card--big">
+                            <div class="portfolio__project-img">
+                                <img src="./img/portfolio/dream-wallpaper.jpg" alt="dream psd photo">
+                                <a href="#" class="portfolio__project-btn portfolio__project-btn--big">View</a>
+                            </div>
+                            <div class="portfolio__project-desk">
+                                <div class="portfolio__project-title-wrapper">
+                                    <a href="#" class="portfolio__project-title">Project "Dream"</a>
+                                    <div class="portfolio__project-description">Multi-page project</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="portfolio__project-item-5 portfolio__project-img">
-                            <img src="./img/portfolio/wallpaper-1.jpg" alt="">
-                            <a href="#" class="portfolio__project-btn">View</a>
-                        </div>
-                        <div class="portfolio__project-item-6 portfolio__project-img">
-                            <img src="./img/portfolio/wallpaper-2.jpg" alt="">
-                            <a href="#" class="portfolio__project-btn">View</a>
-                        </div>
-                        <div class="portfolio__project-item-7 portfolio__project-img">
-                            <img src="./img/portfolio/wallpaper-3.jpg" alt="">
-                            <a href="#" class="portfolio__project-btn">View</a>
-                        </div>
-                        <div class="portfolio__project-item-8">
-                            <div class="portfolio__project-title-wrapper">
-                                <a href="#" class="portfolio__project-title portfolio__project-title--small">Project "World of cars"</a>
-                                <div href="#" class="portfolio__project-description portfolio__project-description--small">Landing-page project</div>
+                        <div class="portfolio__card mix boot">
+                            <div class="portfolio__project-img">
+                                <img src="./img/portfolio/wallpaper-1.jpg" alt="">
+                                <a href="#" class="portfolio__project-btn">View</a>
+                            </div>
+                            <div class="portfolio__project-desk">
+                                <div class="portfolio__project-title-wrapper">
+                                    <a href="#" class="portfolio__project-title portfolio__project-title--small">Project "World of cars"</a>
+                                    <div class="portfolio__project-description portfolio__project-description--small">Landing-page project</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="portfolio__project-item-9">
-                            <div class="portfolio__project-title-wrapper">
-                                <a href="#" class="portfolio__project-title portfolio__project-title--small">Project "World of cars"</a>
-                                <div class="portfolio__project-description portfolio__project-description--small">Landing-page project</div>
+                        <div class="portfolio__card mix wp">
+                            <div class="portfolio__project-img">
+                                <img src="./img/portfolio/wallpaper-2.jpg" alt="">
+                                <a href="#" class="portfolio__project-btn">View</a>
+                            </div>
+                            <div class="portfolio__project-desk">
+                                <div class="portfolio__project-title-wrapper">
+                                    <a href="#" class="portfolio__project-title portfolio__project-title--small">Project "World of cars"</a>
+                                    <div class="portfolio__project-description portfolio__project-description--small">Landing-page project</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="portfolio__project-item-10">
-                            <div class="portfolio__project-title-wrapper">
-                                <a href="#" class="portfolio__project-title portfolio__project-title--small">Project "World of cars"</a>
-                                <div class="portfolio__project-description portfolio__project-description--small">Landing-page project</div>
+                        <div class="portfolio__card mix front">
+                            <div class="portfolio__project-img">
+                                <img src="./img/portfolio/wallpaper-3.jpg" alt="">
+                                <a href="#" class="portfolio__project-btn">View</a>
+                            </div>
+                            <div class="portfolio__project-desk">
+                                <div class="portfolio__project-title-wrapper">
+                                    <a href="#" class="portfolio__project-title portfolio__project-title--small">Project "World of cars"</a>
+                                    <div href="#" class="portfolio__project-description portfolio__project-description--small">Landing-page project</div>
+                                </div>
                             </div>
                         </div>
-    
                     </div>
                 </div>
 
             </section>
 
-            <section class="how-it-works">
+            <section class="how-it-works" id="how-it-work">
                 <div class="container">
                     <div class="sub-container">
                         <h2 class="how-it-works__title">
@@ -284,7 +309,7 @@
                 </div>
             </section>
 
-            <section class="contacts">
+            <section class="contacts" id="contacts">
                 <div class="container">
                     <h2 class="contacts__title">
                         <span class="title-line-big">Contacts</span>
@@ -311,7 +336,9 @@
                                     </li>
                                     <li>
                                         <span class="contacts__contact-type">Phone</span> 
-                                        <span class="contacts__contact-data">+4 (80) 729-233-897</span>
+                                        <span class="contacts__contact-data">
+                                            <a href="tel:+480729233897" class="phone">+4 (80) 729-233-897</a>
+                                        </span>
                                     </li>
                                     <li>
                                         <span class="contacts__contact-type">Addres</span>
@@ -339,21 +366,21 @@
                             <img src="./img/contacts/dots.png" alt="Dots" class="contacts__contact-details-img">
                         </div>
 
-                        <form class="contacts__form" action="#" method="post">
+                        <form class="contacts__form" action="#" method="get" id="contact-form">
                                 <div class="contacts__form-inputs-wrapper">
 
                                     <div class="contacts__form-item">
-                                        <input type="text" class="contacts__form-input" id="contacts__email-lbl" required>
+                                        <input type="text" name="email" class="contacts__form-input" id="contacts__email-lbl" required>
                                         <lable class="contacts__form-lable" for="contacts__emael-lbl">Your email</lable>
                                     </div>  
 
                                     <div class="contacts__form-item">
-                                        <input type="text" class="contacts__form-input" id="contacts__message-lbl" required>
+                                        <input type="text" name="theme" class="contacts__form-input" id="contacts__message-lbl" required>
                                         <lable class="contacts__form-lable"  for="contacts__message-lbl">Message Theme</lable>
                                     </div>
 
                                     <div class="contacts__form-item">
-                                        <textarea class="contacts__form-textarea" id="contacts__form-textarea-lbl" placeholder=" "></textarea>
+                                        <textarea class="contacts__form-textarea" name="message" id="contacts__form-textarea-lbl" placeholder=" "></textarea>
                                         <lable class="contacts__form-lable"  for="contacts__form-textarea-lbl">Message</lable>
                                     </div>
                                 </div>
@@ -375,7 +402,12 @@
         </footer>
 
 
-
+        <!-- public script  -->
+        <script src="./libs/JQuery/jquery-3.4.1.min.js"></script>
+        <script src="./libs/JQueryValidator/jquery.validate.js"></script>
+        <script src="./libs/mixitup2/jquery.mixitup.min.js"></script>
+        <script src="./libs/nav.js/nav.js"></script>
+        <!-- user scripts  --> 
         <script src="./js/main.js"></script>
     </body>
 </html>
