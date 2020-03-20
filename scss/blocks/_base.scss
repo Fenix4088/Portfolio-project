@@ -64,8 +64,19 @@ textarea {
 // /COMMON STYLES
 
 .container {
+    border: 1px solid red;
+    padding: 0 15px;
     margin: 0 auto;
-    max-width: 1140px;
+    min-width: 290px;
+    @media (min-width: 768px) {
+        padding: 0 30px;
+        min-width: 708px;
+    }
+    
+    @media (min-width: 1200px) {
+        padding: 0;
+        max-width: 1140px;
+    }
 }
 
 .sub-container {
@@ -98,11 +109,20 @@ textarea {
     position: relative;
     z-index: 1;
         &::before {
-            bottom: 16px;
+            bottom: 6px;
             right: -5px;
             left: -5px;
             height: 12px;
             @include yellow-subline;
+
+            @media (min-width: 768px) {
+                bottom: 10px;
+            }
+            
+            @media (min-width: 1200px) {
+                bottom: 16px;
+            
+            }
         }
 }
 
@@ -110,12 +130,23 @@ textarea {
     position: relative;
     z-index: 1;
         &::before {
-            bottom: 25px;
+            bottom: 9px;
             right: -5px;
             left: -5px;
             height: 12px;
             @include yellow-subline;
+
+            @media (min-width: 768px) {
+    
+            }
+            
+            @media (min-width: 1200px) {
+                bottom: 25px;
+            
+            }
         }
+
+        
 }
 // /YELLOW LINES UNDER TITELS 
 
@@ -123,9 +154,10 @@ textarea {
     &::before {
         content: '';
         position: absolute;
-            bottom: 0;
-        width: 100%;
+        bottom: 0;
+        width: 120%;
         height: 5px;
+        left: -5px;
         background-color: $yellow-main;
     }
 }
@@ -136,10 +168,14 @@ textarea {
 
 // Page navigation
 #page-nav {
-    position: fixed;
-    right: 50px;
-    top: 50%;
-    z-index: 100;
+    display: none;
+    @media (min-width: 1200px) {
+        display: block;
+        position: fixed;
+        right: 50px;
+        top: 50%;
+        z-index: 100;
+    }
 }
 
 #page-nav li {
@@ -166,9 +202,18 @@ textarea {
 .intouch-block {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     a {
-        margin-right: 18px;
+        @media (min-width: 768px) {
+            margin-right: 18px;
+        }
+
     }
+
+    @media (min-width: 768px) {
+        justify-content: unset;
+    }
+    
 }
 
 .fa-linkedin-in {

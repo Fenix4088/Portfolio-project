@@ -1,20 +1,31 @@
 .header {
-    padding: 70px 0 240px;
+    padding: 30px 0 95px;
     margin: 0 auto;
     max-width: 1600px;
     background-image: url(../img/backgrounds/lines.jpg);
     background-size: contain;
     background-position: center bottom;
     background-repeat: repeat;
+
+    @media (min-width: 768px) {
+        padding: 30px 0 80px;  
+    }
+    
+    @media (min-width: 1200px) {
+        padding: 70px 0 240px;
+    }
 }
 
 .header__navigation {
     margin: 0 auto;
-    padding: 0 110px;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1600px;
+    @media (min-width: 768px) {
+        padding: 0 110px;
+    }
+    
 }
 
 .header__navigation-logo {
@@ -93,7 +104,8 @@
         }
 
         &:hover::before {
-            width: 100%;
+            width: 120%;
+            left: -5px;
         }
 
 }
@@ -125,43 +137,102 @@
 
 // HEADER CONTENT 
 .header__content-wrapper {
-    // padding: 153px 0 125px;
-    padding-top: 153px;
+    padding-top: 30px;
     position: relative;
     display: flex;
+    flex-flow: column-reverse nowrap;
     justify-content: space-between;
+    z-index: 5;
+    @media (min-width: 768px) {
+        padding-top: 70px;
+        flex-flow: row nowrap;
+    }
+    
+    @media (min-width: 1200px) {
+        padding-top: 153px;
+    }
 }
 
 .header__content-description {
-    width: 50%;
-    max-width: 585px;
+    width: 100%;
+    @media (min-width: 768px) {
+        width: 50%;
+        max-width: 585px;
+    
+    }
+    
+    @media (min-width: 1200px) {
+    }
 }
 
 .header__title {
     margin-bottom: 27px;
-    font-size: 90px;
+    font-size: 42px;
     font-weight: 900;
     line-height: 1;
+    @media (min-width: 768px) {
+        font-size: 52px;
+    }
+    
+    @media (min-width: 1200px) {
+        font-size: 90px;
+    }
+
+        br {
+                display: none;
+                @media (min-width: 768px) {
+                    display: inline-block;
+                }
+                    
+                @media (min-width: 1200px) {
+                
+                }
+        }
 }
 
 .header__content-description p {
     margin-bottom: 36px;
-    max-width: 54ch;
+    max-width: unset;
     @include big-paragraph;
     font-weight: 700;
+    @media (min-width: 768px) {
+    
+    }
+    
+    @media (min-width: 1200px) {
+        max-width: 54ch;
+    }
+}
+
+.header__btn {
+    display: none;
+    @media (min-width: 768px) {
+    
+    }
+    
+    @media (min-width: 1200px) {
+        display: inline-block;
+    }
 }
 
 .header__content-photo {
-    // position: relative;
-    width: 41%;
-    max-width: 460px;
-    max-height: 415px;
+    margin-bottom: 50px;
+    width: 100%;
     overflow: hidden;
     z-index: 2;
-
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+        max-width: 460px;
+        width: 41%;
+    }
+    
+    @media (min-width: 1200px) {
+        max-height: 415px;
+    }
 }
 
 .header__content-photo-back {
+        display: none;
         position: absolute;
         bottom: -145px;
         right: -139px;
@@ -172,20 +243,35 @@
         background-image: -ms-linear-gradient( 90deg, rgb(244,248,249) 0%, rgba(244,248,249,0) 100%);
         opacity: 0.502;
         z-index: 1;
+        @media (min-width: 768px) {
+    
+        }
+        
+        @media (min-width: 1200px) {
+            display: block;
+        }
 }
 
 .header__image {
     position: relative;
     margin-top: -70px;
-    margin: 0 auto;
     max-width: 1600px;
+    z-index: 1;
 }
 
 // MY SKILS SECTION 
 
 .header__my-skils-wrapper {
     display: flex;
+    flex-flow: column nowrap;
     justify-content: space-between;
+    @media (min-width: 768px) {
+        flex-flow: row nowrap;
+    }
+    
+    @media (min-width: 1200px) {
+    
+    }
 }
 
 .header__my-skils-title {
@@ -198,35 +284,66 @@
 }
 
 .header__my-skils-list {
-    padding-left: 32px;
+    padding-left: 0;
+    margin-bottom: 15px;
     position: relative;
     font-weight: 400;
     line-height: 1.5;
     @include big-paragraph;
         &::after {
-            content: '';
+            content: none;
             position: absolute;
                 top: 20px;
                 left: 0;
             width: 24px;
             height: 1.5px;
             background-color: #333;
+            @media (min-width: 768px) {
+    
+            }
+            
+            @media (min-width: 1200px) {
+                content: '';
+            }
         }
         
         &:last-child {
             margin-bottom: 0;
         }
+
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+        }
+        
+        @media (min-width: 1200px) {
+            padding-left: 32px;
+        }
 }
 
 .header__my-skils-btn {
+    display: none;
     @include color-btn;
+
+    @media (min-width: 768px) {
+    }
+    
+    @media (min-width: 1200px) {
+        display: inline-block;
+    }
 }
 
 .header__intouch {
-    width: 33%;
-    max-width: 360px;
     display: flex;
     flex-flow: column nowrap;
+
+    @media (min-width: 768px) {
+        width: 33%;
+        max-width: 360px;
+    }
+    
+    @media (min-width: 1200px) {
+    
+    }
 }
 
 .header__intouch-title {
@@ -239,8 +356,9 @@
 }
 
 .header__intouch-email {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 400;
+    text-align: center;
     color: #000;
     text-decoration: underline;
         &:hover {
@@ -250,5 +368,15 @@
         &:active {
             color: #f4adaa;
         }
+
+    @media (min-width: 768px) {
+        font-size: 20px;
+        text-align: left;
+
+    }
+    
+    @media (min-width: 1200px) {
+        font-size: 24px;
+    }
 }
 

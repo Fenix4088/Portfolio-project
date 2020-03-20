@@ -15,6 +15,7 @@
         <title>Portfolio project | Main page</title>
     </head>
     <body>
+
         <ul id="page-nav">
             <li class="active">
                 <a href="#header"></a>
@@ -29,6 +30,7 @@
                 <a href="#contacts"></a>
             </li>
         </ul>
+
         <header class="header" id="header">
             <nav class="header__navigation">
                 <div class="header__navigation-logo">
@@ -73,7 +75,7 @@
             </nav>
 
             <div class="container">
-                <div class="header__content-wrapper none">
+                <div class="header__content-wrapper">
                     <div class="header__content-description">
                         <h1 class="header__title">
                             <span class="title-line-big">Yehor</span><br>
@@ -81,8 +83,8 @@
                         </h1>
                         <p>Front-end developer.<br>Works fast in compliance with deadlines and technical specifications.</p>
                         <div class="header__btn-container">
-                            <a href="#aboutMe" class="color-btn">About me</a>
-                            <a href="./pages/contacts-page.html" class="colorless-btn">Contacts</a>
+                            <a href="#aboutMe" class="color-btn header__btn">About me</a>
+                            <a href="./pages/contacts-page.html" class="colorless-btn header__btn">Contacts</a>
                         </div>
                     </div>
 
@@ -124,7 +126,7 @@
                     </div>
     
                     <div class="header__intouch">
-                        <h3 class="header__intouch-title">In touch:</h3>
+                        <h3 class="header__intouch-title">In&nbsp;touch:</h3>
                         <div class="header__intouch-links intouch-block">
                             <a href="https://github.com/Fenix4088?tab=repositories" target="_blank">
                                 <i class="fab fa-github fa-3x"></i>
@@ -167,7 +169,7 @@
                     </div>
     
                     <div class="portfolio__projects-wrapper" id="portfolio-project-filter">
-                        <div class="portfolio__card portfolio__card--big">
+                        <div class="portfolio__card portfolio__card--big mix front boot">
                             <div class="portfolio__project-img">
                                 <img src="./img/portfolio/forest-travel-wallpaper.jpg" alt="forest travel photo">
                                 <a href="#" class="portfolio__project-btn portfolio__project-btn--big">View</a>
@@ -179,7 +181,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="portfolio__card portfolio__card--big">
+                        <div class="portfolio__card portfolio__card--big mix front boot">
                             <div class="portfolio__project-img">
                                 <img src="./img/portfolio/dream-wallpaper.jpg" alt="dream psd photo">
                                 <a href="#" class="portfolio__project-btn portfolio__project-btn--big">View</a>
@@ -227,6 +229,10 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="portfolio__toggles-link">
+                        <a href="./pages/projects-page.html">View all projects</a>
                     </div>
                 </div>
 
@@ -309,7 +315,7 @@
                 </div>
             </section>
 
-            <section class="contacts" id="contacts">
+            <section class="contacts none" id="contacts">
                 <div class="container">
                     <h2 class="contacts__title">
                         <span class="title-line-big">Contacts</span>
@@ -391,7 +397,7 @@
             </section>
         </main>
 
-        <footer class="footer">
+        <footer class="footer none">
             <div class="container">
                 <div class="footer__devName">&copy;&nbsp;2020 - Yehor Pliasov</div>
                 <p>Web developer from Zaporozhue, creating webpages - my passion.</p>

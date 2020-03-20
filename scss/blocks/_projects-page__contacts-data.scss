@@ -4,8 +4,14 @@
 
 .contacts-data {
     padding: 160px 0 460px;
+    margin: 0 auto;
+    max-width: 1600px;
     font-family: "Roboto";
     color: rgb(22, 22, 22);
+    background-image: url(../img/backgrounds/projects-page-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
 }
 
 .contacts-data__wrapper {
