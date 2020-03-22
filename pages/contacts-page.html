@@ -15,6 +15,9 @@
         <title>Portfolio project | Contacts</title>
     </head>
     <body>
+        <!-- OVERLAY WHEN MOBILE MENUE IS ACTIVE  -->
+        <div class="overlay"></div>
+        <!-- /OVERLAY WHEN MOBILE MENUE IS ACTIVE  -->
         <header class="header--bg header-padding">
             <nav class="header__navigation">
 
@@ -23,18 +26,49 @@
                         <a href="../index.html">YP</a>
                     </span>
                 </div>
+                <!-- MOBILE MENUE  -->
+                <div class="header__burger-wrap">
+                    <label class="header__burger-label">
+                        <input type="checkbox" class="header__burger-checkbox">
+                        <span class="header__burger"></span>
+                    </label>
+                </div>
+            <!-- //MOBILE MENUE  -->
+                <div class="header__navigation-block">
+                    <ul class="header__navigation-list">
+                        <li class="header__navigation-list-item">
+                            <a href="../index.html">Main</a>
+                        </li>
+                        <li class="header__navigation-list-item">
+                            <a href="./projects-page.html" >Projects</a>
+                        </li>
+                        <li class="header__navigation-list-item">
+                            <a href="./contacts-page.html" class="active-page">Contacts</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="intouch-block intouch-block--mobile">
+                        <a href="https://github.com/Fenix4088?tab=repositories" target="_blank">
+                            <i class="fab fa-github fa-3x"></i>
+                        </a>
 
-                <ul class="header__navigation-list">
-                    <li class="header__navigation-list-item">
-                        <a href="../index.html">Main</a>
-                    </li>
-                    <li class="header__navigation-list-item">
-                        <a href="./projects-page.html">Projects</a>
-                    </li>
-                    <li class="header__navigation-list-item">
-                        <a href="#"  class="active-page">Contact</a>
-                    </li>
-                </ul>
+                        <a href="#">
+                            <i class="fab fa-telegram fa-3x"></i>
+                        </a>
+
+                        <a href="https://vk.com/id13266823" target="_blank">
+                            <i class="fab fa-vk fa-vk--modify"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com/profile.php?id=100013553615468" target="_blank">
+                            <i class="fab fa-facebook fa-3x"></i>
+                        </a>
+                    </div>
+
+                    <div class="header__naviation-email mobile-email">
+                        <a href="mailto:fenix4088@gmail.com">fenix4088@gmail.com</a>
+                    </div>
+                </div>
 
                 <div class="header__navigation-icons">
                     <div class="header__navigation-icon linkedin-icon">
@@ -147,4 +181,11 @@
                 </p>
             </div>
         </footer>
+
+        <!-- public script  -->
+        <script src="../libs/JQuery/jquery-3.4.1.min.js"></script>
+        <script src="../libs/mixitup2/jquery.mixitup.min.js"></script>
+        <script src="../libs/nav.js/nav.js"></script>
+        <!-- user scripts  --> 
+        <script src="../js/main.js"></script>
     </body>

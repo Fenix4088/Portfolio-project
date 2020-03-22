@@ -1,5 +1,5 @@
 .how-it-works {
-    padding: 140px 0;
+    padding: 55px 0;
     margin: 0 auto;
     max-width: 1600px;
 
@@ -7,12 +7,27 @@
     background-size: auto;
     background-position: center;
     background-repeat: repeat;
+
+    @media (min-width: 768px) {
+        padding: 90px 0;
+    
+    }
+    
+    @media (min-width: 1200px) {
+        padding: 140px 0;
+        
+    }
 }
 
 .how-it-works__title {
-    margin-bottom: 168px;
+    margin-bottom: 60px;
     @include title-big;
     text-align: center;
+
+    @media (min-width: 768px) {
+        margin-bottom: 168px;
+    }
+    
 }
 
 .how-it-works__timeline {
@@ -26,30 +41,37 @@
 }
 
 .how-it-works__timeline-stage {
-    margin-bottom: 77px;
+    margin-bottom: 65px;
     padding-left: 80px;
-    width: 50%;
     position: relative;
-    min-height: 150px;
 
         &::after {
             content: '';
             position: absolute;
             left: 0;
             top: 82px;
-            bottom: -45px;
+            bottom: -34px;
             width: 4px;
             background-color: rgb(225, 238, 244);
+
+            @media (min-width: 768px) {
+                bottom: -45px;
+            }
         }
 
         &:first-child::before {
-            content: '';
+            content: none;
             position: absolute;
             right: 0;
             top: -106px;
             width: 4px;
             height: 75px;
             background-color: rgb(225, 238, 244);
+
+            @media (min-width: 768px) {
+                content: '';
+            }
+
         }
 
         &:last-child::after {
@@ -57,6 +79,11 @@
         }
 
         @media(min-width: 768px) {
+            margin-bottom: 77px;
+            width: 50%;
+            min-height: 150px;
+
+
             &:nth-child(2n) {
                 margin-left: auto;
             }
@@ -82,7 +109,7 @@
 
 .how-it-works__timeline-title {
     margin-bottom: 12px;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 900;
     cursor: default;
         & > .title-line::before {
@@ -92,18 +119,54 @@
         & .title-line:hover::before {
             background-color: $red-main;
         }
+
+        @media (min-width: 768px) {
+            font-size: 24px;
+    
+        }
+        
+        @media (min-width: 1200px) {
+            font-size: 26px;
+        
+        }
+}
+
+.how-it-works__timeline-title > .title-line::before {
+    display: none;
+
+    @media (min-width: 1200px) {
+        display: inline-block;
+
+    }
 }
   
 .how-it-works__timeline-description {
     margin-bottom: 15px;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.2;
     font-weight: 500;
+
+    @media (min-width: 768px) {
+        font-size: 16px;
+    
+    }
+    
+    @media (min-width: 1200px) {
+        font-size: 18px;
+    }
 }
 
 .how-it-works__timeline-timing {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
+
+    @media (min-width: 768px) {
+        font-size: 16px;
+    }
+    
+    @media (min-width: 1200px) {
+        font-size: 18px;
+    }
 }
 
 .how-it-works__timeline-img {

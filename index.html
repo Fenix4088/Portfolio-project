@@ -16,6 +16,7 @@
     </head>
     <body>
 
+        <!-- DESKTOP PAGE NAVIGATION  -->
         <ul id="page-nav">
             <li class="active">
                 <a href="#header"></a>
@@ -30,6 +31,11 @@
                 <a href="#contacts"></a>
             </li>
         </ul>
+        <!-- /DESKTOP PAGE NAVIGATION  -->
+
+        <!-- OVERLAY WHEN MOBILE MENUE IS ACTIVE  -->
+        <div class="overlay"></div>
+        <!-- /OVERLAY WHEN MOBILE MENUE IS ACTIVE  -->
 
         <header class="header" id="header">
             <nav class="header__navigation">
@@ -39,20 +45,52 @@
                     </span>
                     
                 </div>
-                <!-- BURGER MENUE  -->
-                <span class="header__burger"></span>
-                <!-- //BURGER MENUE  -->
-                <ul class="header__navigation-list">
-                    <li class="header__navigation-list-item">
-                        <a href="#" class="active-page">Main</a>
-                    </li>
-                    <li class="header__navigation-list-item">
-                        <a href="./pages/projects-page.html">Projects</a>
-                    </li>
-                    <li class="header__navigation-list-item">
-                        <a href="./pages/contacts-page.html">Contact</a>
-                    </li>
-                </ul>
+                <!-- MOBILE MENUE  -->
+                    <div class="header__burger-wrap">
+                        <label class="header__burger-label">
+                            <input type="checkbox" class="header__burger-checkbox">
+                            <span class="header__burger"></span>
+                        </label>
+                    </div>
+                <!-- //MOBILE MENUE  -->
+
+                <div class="header__navigation-block">
+                    <ul class="header__navigation-list">
+                        <li class="header__navigation-list-item">
+                            <a href="#" class="active-page">Main</a>
+                        </li>
+                        <li class="header__navigation-list-item">
+                            <a href="./pages/projects-page.html">Projects</a>
+                        </li>
+                        <li class="header__navigation-list-item">
+                            <a href="./pages/contacts-page.html">Contacts</a>
+                        </li>
+                    </ul>
+
+                    <div class="intouch-block intouch-block--mobile">
+                        <a href="https://github.com/Fenix4088?tab=repositories" target="_blank">
+                            <i class="fab fa-github fa-3x"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fab fa-telegram fa-3x"></i>
+                        </a>
+
+                        <a href="https://vk.com/id13266823" target="_blank">
+                            <i class="fab fa-vk fa-vk--modify"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com/profile.php?id=100013553615468" target="_blank">
+                            <i class="fab fa-facebook fa-3x"></i>
+                        </a>
+                    </div>
+
+                    <div class="header__naviation-email mobile-email">
+                        <a href="mailto:fenix4088@gmail.com">fenix4088@gmail.com</a>
+                    </div>
+
+                </div>
+
 
                 <div class="header__navigation-icons">
                     <div class="header__navigation-icon linkedin-icon">
@@ -315,10 +353,10 @@
                 </div>
             </section>
 
-            <section class="contacts none" id="contacts">
+            <section class="contacts" id="contacts">
                 <div class="container">
                     <h2 class="contacts__title">
-                        <span class="title-line-big">Contacts</span>
+                        <span class="title-line-middle">Contacts</span>
                     </h2>
                     <div class="contacts__wrapper">
 
@@ -397,7 +435,7 @@
             </section>
         </main>
 
-        <footer class="footer none">
+        <footer class="footer">
             <div class="container">
                 <div class="footer__devName">&copy;&nbsp;2020 - Yehor Pliasov</div>
                 <p>Web developer from Zaporozhue, creating webpages - my passion.</p>
@@ -410,7 +448,6 @@
 
         <!-- public script  -->
         <script src="./libs/JQuery/jquery-3.4.1.min.js"></script>
-        <script src="./libs/JQueryValidator/jquery.validate.js"></script>
         <script src="./libs/mixitup2/jquery.mixitup.min.js"></script>
         <script src="./libs/nav.js/nav.js"></script>
         <!-- user scripts  --> 
