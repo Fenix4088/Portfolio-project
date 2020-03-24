@@ -30,7 +30,7 @@ h1 {
 }
 
 body {
-    font-family: 'M PLUS 1p', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 500;
     color: #000;
 }
@@ -64,7 +64,6 @@ textarea {
 // /COMMON STYLES
 
 .container {
-    border: 1px solid red;
     padding: 0 15px;
     margin: 0 auto;
     min-width: 290px;
@@ -202,6 +201,8 @@ textarea {
 
 #page-nav li a {
     display: block;
+    outline: none;
+
     height: 100%;
 }
 

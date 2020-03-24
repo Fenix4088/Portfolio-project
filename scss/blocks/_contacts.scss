@@ -21,7 +21,8 @@
     @include title-big;
     text-align: center;
     & span::before {
-        bottom: 15px;
+        bottom: 9px;
+        
     }
 
     @media (min-width: 768px) {
@@ -268,5 +269,10 @@
     }
 }
 
-  
+.error {
+    font-size: 12px;
+    font-style: italic;
+    color: $red-main;
+
+}
   
