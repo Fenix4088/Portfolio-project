@@ -32,7 +32,6 @@
 }
 
 .contacts__wrapper {
-    max-width: 1600px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -184,7 +183,7 @@
 
 .contacts__form-item {
     margin-bottom: 40px;
-    display: inline;
+    display: inline-block;
     position: relative;
 
     &:last-child {
@@ -207,60 +206,26 @@
         &:focus {
             border-bottom: 1px solid $red-main;
         }
-
-        &:focus + .contacts__form-lable {
-            top: -20px;
-            font-size: 16px;
-            color: rgb(237, 150, 38);
-        }
-
-        &:not(:focus):valid + .contacts__form-lable {
-            top: -20px;
-            font-size: 16px;
-            color: rgb(237, 150, 38);
-
-        }
-  
 }
 
 
-.contacts__form-lable {
+.contacts__form-placeholder {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 5px;
     color: rgb(188, 188, 188);
     font-weight: bold;
     transition: all, .2s ease-in;
     pointer-events: none;
+
 }
 
- 
-.contacts__form-textarea {
-    width: 100%;
-    height: 90px;
+.contacts__form-placeholder.active {
     font-size: 16px;
-    font-weight: 500;
-    border: none;
-    border-bottom: 1px solid #cecece;
-
-    &:focus {
-        border-bottom: 1px solid $red-main;
-    }
-
-    &:focus + .contacts__form-lable {
-        top: -40px;
-        font-size: 16px;
-        color: rgb(237, 150, 38);
-    }
-
-    &:not(:placeholder-shown) + .contacts__form-lable {
-        top: -40px;
-        font-size: 16px;
-        color: rgb(237, 150, 38);
-
-    }
-
+    color: rgb(237, 150, 38);
+    top: -10px;
 }
+
 
 .contacts__form-btn {
     width: 100%;

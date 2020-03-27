@@ -87,8 +87,35 @@ $(document).ready(function (){
         }
     });
 
-    Visible(element);
+    for (let el of element) {
+        Visible(el);
+    }
 
+
+    // FORM PLACEHOLDER ANIMATION 
+    const formItems = document.querySelectorAll('.contacts__form-item')
+    const formInputs = document.querySelectorAll('.contacts__form-input')
+
+    for (let i = 0; i < formItems.length; i++) {
+
+        formItems[i].addEventListener('click', function () {
+            const placeholderElement = this.querySelector('.contacts__form-placeholder')
+            placeholderElement.classList.add('active')
+
+        })
+    }
+
+    for (let i = 0; i < formInputs.length; i++) {
+        formInputs[i].addEventListener('blur', function () {
+
+            const thisParent = this.parentElement;
+
+            if (this.value == '') {
+
+                thisParent.querySelector('span').classList.remove('active');
+            }
+        })
+    }
 
 
 })
