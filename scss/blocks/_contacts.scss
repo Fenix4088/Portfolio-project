@@ -157,6 +157,7 @@
     padding: 55px 12px 40px;
     margin: 0 auto;
     max-width: 290px;
+    max-height: 515px;
     font-size: 20px; 
     box-shadow: 0px 28px 100px 0px rgba(194, 219, 235, 1);
     background-color: #fff;
@@ -170,6 +171,7 @@
     
     @media (min-width: 1200px) {
         padding: 55px 60px 40px;
+
     }
 }
 
@@ -181,13 +183,21 @@
 }
 
 .contacts__form-item {
+    margin-bottom: 40px;
     display: inline;
     position: relative;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @media (min-width: 1200px) {
+        margin-bottom: 60px;
+    }
 }
 
 .contacts__form-input {
     width: 100%;
-    margin-bottom: 40px;
     padding: 10px 5px;
     font-size: 20px;
     font-weight: bold;
@@ -211,10 +221,6 @@
 
         }
   
-        @media (min-width: 1200px) {
-            margin-bottom: 60px;
-        
-        }
 }
 
 

@@ -30,7 +30,7 @@ h1 {
 }
 
 body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Titillium Web', sans-serif;;
     font-weight: 500;
     color: #000;
 }
@@ -274,9 +274,9 @@ textarea {
     border-radius: 50%;
     background-color: #4d76a1;
     transition: all .2s ease-in;
-    &:hover {
-        color:#113c69;
-    }
+        &:hover {
+            background-color: #6992e9;
+        }
 
 }
 
@@ -327,20 +327,21 @@ textarea {
 
 // Fixesed navigation on top
 .nav-fixed {
-    padding-top: 0;
-    height: 100px;
     position: fixed;
     top: 0;
-    width: 100%;
-    // background-color: rgba(114, 111, 111, 0.6);
-    background-color: rgba(255, 255, 255, .7);
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .2);
+    backdrop-filter: blur(5px);
     z-index: 100;
+
+    @media (min-width: 1440px) {
+        padding: 0;
+    }
 }
 
-.nav-fixed .header__navigation-block > .header__navigation-list,
-.nav-fixed .header__navigation-block {
+.nav-fixed .header__navigation-block > .header__navigation-list{
     background-color: transparent;
-    transition: all .00001s linear;
     z-index: 101;
 }
 //  /Fixesed navigation on top

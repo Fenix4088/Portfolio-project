@@ -16,16 +16,16 @@
     }
 }
 
+.fixed-wrapper {
+}
+
 .header__navigation {
     margin: 0 auto;
     padding: 0 20px;
+    max-width: 1400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media (min-width: 768px) {
-        padding: 0 110px;
-    }
-
 }
 
 .header__navigation-logo {
@@ -65,10 +65,9 @@
         background-color: #000;
         transition: all .2s ease-in;
     }
+    
     &::after {bottom: 10px;}
     &::before {top: 10px;}
-
-
 }
 
 .header__burger-checkbox {
@@ -89,16 +88,15 @@
     background-color: transparent;
 }
 
-
 // /BURGER MENUE 
 
 .header__navigation-block {
     padding: 100px 20px 0 20px;
     position: fixed;
     top: 0;
-    bottom: 0;
     right: 0;
     width: 100%;
+    height: 100vh;
     max-width: 320px;
     background-color: #fff;
     z-index: 20;
@@ -106,13 +104,17 @@
     transition: all .5s ease-in;
 
     @media (min-width: 992px) {
+        padding: 0;
+        display: flex;
+        justify-content: center;
         position: relative;
         top: auto;
         bottom: auto;
         right: auto;
-        padding: 0;
+        max-width: unset;
+        height: unset;
+        background-color: transparent;
         transform: translateX(0%);
-
     }
 }
 
@@ -452,3 +454,4 @@
     }
 }
 
+// Animation for Mobile Menue 

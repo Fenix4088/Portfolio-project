@@ -28,7 +28,7 @@ h1 {
   margin: 0; }
 
 body {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Titillium Web', sans-serif;
   font-weight: 500;
   color: #000; }
 
@@ -272,7 +272,7 @@ textarea {
   -moz-transition: all .2s ease-in;
   transition: all .2s ease-in; }
   .fa-vk--modify:hover {
-    color: #113c69; }
+    background-color: #6992e9; }
 
 .fa-facebook {
   -webkit-transition: all .2s ease-in;
@@ -336,21 +336,20 @@ textarea {
           backdrop-filter: blur(5px); }
 
 .nav-fixed {
-  padding-top: 0;
-  height: 100px;
   position: fixed;
   top: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   z-index: 100; }
+  @media (min-width: 1440px) {
+    .nav-fixed {
+      padding: 0; } }
 
-.nav-fixed .header__navigation-block > .header__navigation-list,
-.nav-fixed .header__navigation-block {
+.nav-fixed .header__navigation-block > .header__navigation-list {
   background-color: transparent;
-  -webkit-transition: all .00001s linear;
-  -o-transition: all .00001s linear;
-  -moz-transition: all .00001s linear;
-  transition: all .00001s linear;
   z-index: 101; }
 
 .header {
@@ -372,6 +371,7 @@ textarea {
 .header__navigation {
   margin: 0 auto;
   padding: 0 20px;
+  max-width: 1400px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -387,9 +387,6 @@ textarea {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  @media (min-width: 768px) {
-    .header__navigation {
-      padding: 0 110px; } }
 
 .header__navigation-logo {
   display: -webkit-box;
@@ -462,9 +459,9 @@ textarea {
   padding: 100px 20px 0 20px;
   position: fixed;
   top: 0;
-  bottom: 0;
   right: 0;
   width: 100%;
+  height: 100vh;
   max-width: 320px;
   background-color: #fff;
   z-index: 20;
@@ -479,11 +476,24 @@ textarea {
   transition: all .5s ease-in; }
   @media (min-width: 992px) {
     .header__navigation-block {
+      padding: 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+         -moz-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       position: relative;
       top: auto;
       bottom: auto;
       right: auto;
-      padding: 0;
+      max-width: unset;
+      height: unset;
+      background-color: transparent;
       -webkit-transform: translateX(0%);
          -moz-transform: translateX(0%);
           -ms-transform: translateX(0%);
@@ -1430,6 +1440,7 @@ textarea {
   padding: 55px 12px 40px;
   margin: 0 auto;
   max-width: 290px;
+  max-height: 515px;
   font-size: 20px;
   -webkit-box-shadow: 0px 28px 100px 0px #c2dbeb;
      -moz-box-shadow: 0px 28px 100px 0px #c2dbeb;
@@ -1466,12 +1477,17 @@ textarea {
           justify-content: center; }
 
 .contacts__form-item {
+  margin-bottom: 40px;
   display: inline;
   position: relative; }
+  .contacts__form-item:last-child {
+    margin-bottom: 0; }
+  @media (min-width: 1200px) {
+    .contacts__form-item {
+      margin-bottom: 60px; } }
 
 .contacts__form-input {
   width: 100%;
-  margin-bottom: 40px;
   padding: 10px 5px;
   font-size: 20px;
   font-weight: bold;
@@ -1488,9 +1504,6 @@ textarea {
     top: -20px;
     font-size: 16px;
     color: #ed9626; }
-  @media (min-width: 1200px) {
-    .contacts__form-input {
-      margin-bottom: 60px; } }
 
 .contacts__form-lable {
   position: absolute;
@@ -1578,19 +1591,18 @@ textarea {
   background-color: #f4f8f9; }
 
 .contacts-data {
-  padding: 160px 0 460px;
   margin: 0 auto;
   max-width: 1600px;
   font-family: "Roboto";
   text-align: center;
-  color: #161616;
-  background-image: url(../img/backgrounds/projects-page-bg.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  -moz-background-size: auto;
-       background-size: auto; }
+  color: #161616; }
+
+.contacts-data__img {
+  margin-top: -80px;
+  z-index: 2; }
 
 .contacts-data__wrapper {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -1612,7 +1624,8 @@ textarea {
   -webkit-align-items: center;
      -moz-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  z-index: 10; }
 
 .contacts-data__wrapper > .intouch-block {
   width: 80%;

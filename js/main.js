@@ -2,6 +2,9 @@
 $(document).ready(function (){
     // Filtration
     $('#portfolio-project-filter').mixItUp();
+    // WOW 
+    new WOW().init();
+
 
     //Nav page navigation
     $('#page-nav').onePageNav({
@@ -38,7 +41,7 @@ $(document).ready(function (){
 
     // Fixed navigation 
     window.onscroll = function showNav() {
-        let navFixed = document.querySelector('.header__navigation');
+        let navFixed = document.querySelector('.fixed-wrapper');
         
 
         if(window.pageYOffset > 200) {
@@ -47,10 +50,6 @@ $(document).ready(function (){
             navFixed.classList.remove('nav-fixed');
         }
     };
-
-    // FORM VALIDATION 
-    $("#contact-form").validate();
-
 
     /* TIMELINE ANIMATION*/
    
@@ -90,5 +89,6 @@ $(document).ready(function (){
 
     Visible(element);
 
-})
 
+
+})

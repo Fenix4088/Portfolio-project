@@ -3,23 +3,28 @@
 }
 
 .contacts-data {
-    padding: 160px 0 460px;
+    // padding: 160px 0 460px;
     margin: 0 auto;
     max-width: 1600px;
     font-family: "Roboto";
     text-align: center;
     color: rgb(22, 22, 22);
-    background-image: url(../img/backgrounds/projects-page-bg.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
 }
 
+
+.contacts-data__img {
+    margin-top: -80px;
+    z-index: 2;
+}
+
+
 .contacts-data__wrapper {
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
 
 .contacts-data__wrapper > .intouch-block {
