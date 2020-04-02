@@ -20,18 +20,19 @@
 }
 
 .how-it-works__title {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     @include title-big;
     text-align: center;
 
     @media (min-width: 768px) {
-        margin-bottom: 168px;
+        margin-bottom: 128px;
     }
     
 }
 
 .how-it-works__timeline {
     padding-left: 40px;
+    padding-top: 40px;
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
@@ -181,13 +182,12 @@
     height: 74px;
     border-radius: 28px;
     box-shadow: 0px 3px 35px 0px rgba(0, 112, 187, 0.35);
+
+
 }
-
-
-
-
 
 .timeline-animation {
     box-shadow: 0px 3px 35px 0px rgb(243, 239, 16);
     transition: all 3s ease-out;
+
 }

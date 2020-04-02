@@ -67,8 +67,9 @@ textarea {
     padding: 0 15px;
     margin: 0 auto;
     min-width: 290px;
+
     @media (min-width: 768px) {
-        padding: 0 30px;
+        padding: 0 20px;
         min-width: 708px;
     }
     
@@ -88,7 +89,17 @@ textarea {
 }
 
 .header-padding {
-    padding-top: 70px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @media (min-width: 768px) {
+
+    }
+
+    @media (min-width: 1200px) {
+        padding-bottom: 0;
+        padding-top: 60px;
+
+    }
 }
 
 .mobile-email a {
@@ -226,6 +237,7 @@ textarea {
 
 // HOVERS FOR HEADER ICONS
 .intouch-block {
+    max-width: 300px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -343,6 +355,7 @@ textarea {
     top: 0;
     left: 0;
     right: 0;
+    height: 60px;
     background-color: rgba(0, 0, 0, .2);
     backdrop-filter: blur(5px);
     z-index: 100;

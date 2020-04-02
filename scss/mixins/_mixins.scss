@@ -57,11 +57,20 @@
 }
 
 @mixin dark-btn {
-    padding: 25px 0;
+    padding: 20px 0;
     font-size: 22px;
     font-weight: 300;
     color: #fff;
-    background-color: rgb(51, 51, 51); 
+    background-color: rgb(51, 51, 51);
+    transition: all .2s ease; 
+
+    &:hover {
+        background-color: #656565; 
+    }
+
+    &:active {
+        background-color: #141414; 
+    }
 }
 // /BUTTONS MIXINS
 
