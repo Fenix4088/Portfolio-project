@@ -164,6 +164,7 @@
         padding: 55px 25px 0px;
         margin: 0;
         max-width: unset;
+        max-height: unset;
         width: 45%;
     }
     
@@ -244,10 +245,4 @@
     }
 }
 
-.error {
-    font-size: 12px;
-    font-style: italic;
-    color: $red-main;
-
-}
   

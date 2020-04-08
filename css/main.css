@@ -373,6 +373,27 @@ textarea {
   background-color: transparent;
   z-index: 101; }
 
+.error {
+  position: absolute;
+  left: 0;
+  bottom: -42px;
+  margin-bottom: 5px;
+  padding: 14px;
+  font-size: 10px;
+  color: rgba(224, 79, 54, 0.712);
+  font-weight: 700; }
+
+.title-success {
+  margin-bottom: 200px;
+  font-size: 30px;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .title-success {
+      font-size: 60px; } }
+  @media (min-width: 1200px) {
+    .title-success {
+      font-size: 80px; } }
+
 .header {
   padding: 15px 0 95px;
   margin: 0 auto;
@@ -1496,6 +1517,7 @@ textarea {
       padding: 55px 25px 0px;
       margin: 0;
       max-width: unset;
+      max-height: unset;
       width: 45%; } }
   @media (min-width: 1200px) {
     .contacts__form {
@@ -1582,11 +1604,6 @@ textarea {
   @media (min-width: 1200px) {
     .contacts__form-btn {
       width: unset; } }
-
-.error {
-  font-size: 12px;
-  font-style: italic;
-  color: #ea736d; }
 
 .footer {
   padding: 28px 0 38px;
