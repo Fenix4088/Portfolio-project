@@ -123,6 +123,32 @@
     justify-content: space-between;
 }
 
+.header__navigation-language {
+    margin-right: 100px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        margin-left: 20px;
+    }
+
+    @media (min-width: 992px) {
+        display: flex;
+    }
+}
+
+.header__navigation-language--mobile {
+    margin-right: 0;
+    display: flex;
+    justify-content: flex-start;
+
+    @media (min-width: 992px) {
+        display: none;
+    }
+}
+
+
 .header__naviation-email {
     margin-top: 20px;
 }
@@ -190,6 +216,7 @@
 
 
 .intouch-block--mobile.intouch-block {
+    margin-bottom: 20px;
     display: flex;
 
     @media (min-width: 992px) {
