@@ -1,6 +1,4 @@
-// font-family: 'M PLUS 1p', sans-serif;
-// font-family: 'Roboto', sans-serif;
-// COMMON STYLES 
+
 *,
 *::after,
 *::before {
@@ -32,7 +30,7 @@ h1 {
 }
 
 body {
-    font-family: 'M PLUS 1p', sans-serif;
+    font-family: 'Titillium Web', sans-serif;;
     font-weight: 500;
     color: #000;
 }
@@ -59,15 +57,77 @@ button {
     cursor: pointer;
 }
 
+textarea {
+    resize: none;
+}
+
 // /COMMON STYLES
 
 .container {
+    padding: 0 15px;
     margin: 0 auto;
-    max-width: 1140px;
-    border: 1px solid red;
+    min-width: 290px;
+
+    @media (min-width: 768px) {
+        padding: 0 20px;
+        min-width: 708px;
+    }
+    
+    @media (min-width: 1200px) {
+        padding: 0;
+        max-width: 1140px;
+    }
+}
+
+.sub-container {
+    margin: 0 auto;
+    max-width: 1005px;
+}
+
+.none {
+    display: none;
+}
+
+.header-padding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @media (min-width: 768px) {
+
+    }
+
+    @media (min-width: 1200px) {
+        padding-bottom: 0;
+        padding-top: 60px;
+
+    }
+}
+
+.mobile-email a {
+    font-size: 20px;
+    color: rgb(3, 155, 229);
+    transition: all .2s ease-in;
+    &:hover {
+        color: rgb(22, 92, 128);
+    }
+
+    @media (min-width: 992px) {
+        display: none;
+    }
 }
 
 // YELLOW LINES UNDER TITELS 
+.title-line-small {
+    position: relative;
+    z-index: 1;
+        &::before {
+            bottom: 5px;
+            right: -5px;
+            left: -5px;
+            height: 6px;
+            @include yellow-subline;
+        }
+}
+
 .title-line {
     position: relative;
     z-index: 1;
@@ -84,11 +144,20 @@ button {
     position: relative;
     z-index: 1;
         &::before {
-            bottom: 16px;
+            bottom: 6px;
             right: -5px;
             left: -5px;
             height: 12px;
             @include yellow-subline;
+
+            @media (min-width: 768px) {
+                bottom: 10px;
+            }
+            
+            @media (min-width: 1200px) {
+                bottom: 16px;
+            
+            }
         }
 }
 
@@ -96,32 +165,93 @@ button {
     position: relative;
     z-index: 1;
         &::before {
-            bottom: 25px;
+            bottom: 9px;
             right: -5px;
             left: -5px;
             height: 12px;
             @include yellow-subline;
+
+            @media (min-width: 768px) {
+    
+            }
+            
+            @media (min-width: 1200px) {
+                bottom: 25px;
+            
+            }
         }
+
+        
 }
 // /YELLOW LINES UNDER TITELS 
 
-
-.active {
+.active-page {
     &::before {
         content: '';
         position: absolute;
-            bottom: 0;
-        width: 100%;
+        bottom: 0;
+        width: 120%;
         height: 5px;
+        left: -5px;
         background-color: $yellow-main;
     }
 }
 
+.mix {
+    display: none;
+}
+
+// Page navigation
+#page-nav {
+    display: none;
+    @media (min-width: 1200px) {
+        display: block;
+        position: fixed;
+        right: 50px;
+        top: 50%;
+        z-index: 100;
+    }
+}
+
+#page-nav li {
+    width: 12px;
+    height: 12px;
+    background-color: $yellow-main;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    transition: all .2s ease-in;
+}
+
+#page-nav li a {
+    display: block;
+    outline: none;
+
+    height: 100%;
+}
+
+#page-nav li.active {
+    background-color: $blue-main;
+}
+
+// /Page navigation
+
 // HOVERS FOR HEADER ICONS
 .intouch-block {
+    max-width: 300px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
+    a {
+        @media (min-width: 768px) {
+            margin-right: 18px;
+        }
+
+    }
+
+    @media (min-width: 768px) {
+        justify-content: unset;
+    }
+    
 }
 
 .fa-linkedin-in {
@@ -163,14 +293,14 @@ button {
     justify-content: center;
     align-items: center;
     font-size: 34px;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background-color: #4d76a1;
     transition: all .2s ease-in;
-    &:hover {
-        color:#113c69;
-    }
+        &:hover {
+            background-color: #6992e9;
+        }
 
 }
 
@@ -195,5 +325,78 @@ button {
 
 // /BUTTONS 
 
-
+// NO SCROLL
+.noscroll {
+    overflow: hidden;
+} 
+// /NO SCROLL 
   
+// OVERLAY WHEN MOBILE MENUE IS OPEN 
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 18;
+}
+
+.overlay.active {
+    display: block;
+    backdrop-filter: blur(5px);
+}
+// /OVERLAY WHEN MOBILE MENUE IS OPEN 
+
+// Fixesed navigation on top
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: rgba(0, 0, 0, .2);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+
+    @media (min-width: 1440px) {
+        padding: 0;
+    }
+}
+
+.nav-fixed .header__navigation-block > .header__navigation-list{
+    background-color: transparent;
+    z-index: 101;
+}
+//  /Fixesed navigation on top
+
+// Error message in a form 
+
+.error {
+    position: absolute;
+    left: 0;
+    bottom: -42px;
+    margin-bottom: 5px;
+    padding: 14px;
+    font-size: 16px;
+    color: rgba(224, 79, 54, 0.712);
+    font-weight: 700;
+}
+
+
+// Thank you message 
+.title-success {
+    margin-bottom: 200px;
+    font-size: 30px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        font-size: 60px;
+
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 80px;
+    }
+}
