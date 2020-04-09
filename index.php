@@ -1,3 +1,59 @@
+<?php
+    // SENDING EMAIL TO SERVER 
+    if(!empty($_POST) && trim($_POST['email']) != '' && trim($_POST['theme']) != '' && trim($_POST['message']) != '' ) {
+        $message = "You have a message from Portfolio: \n" . 
+                    "Email: " . $_POST['email'] . "\n" . 
+                    "Theme: " . $_POST['theme'] . "\n" . 
+                    "Message: " . $_POST['message'];
+
+        $subject = "=?utf-8?B?".base64_encode("Portfolio message!")."?=";
+
+        $email_from = "fenix4088@gmail.com";
+
+        $headers = "MIME-Version: 1.0" . PHP_EOL . 
+                    "Content-Type: text/html; charset=utf-8" . 
+                    "From: " . "=?utf-8?B?".base64_encode("Privat website Portfolio")."?=" . "<" . $email_from . ">" . PHP_EOL . 
+                    "Reply-To: " . $email_from;
+
+        mail ( 'fenix4088@gmail.com' , $subject, $message, $headers);
+
+        header('location: ./pages/thanks.html');
+    }
+
+
+    // VALIDATION CHEKING
+    function checkValue($item, $message) {
+
+        if (isset($item) && trim($item) == '') {
+
+            echo '<div class="error">' . $message . '</div>';
+            
+        }
+    }
+
+
+    function printPostValue($item) {
+            if(isset($item) && strlen(trim($item)) > 0) {
+                echo $item;
+        } 
+    }
+
+
+    function checkEmail($email) {
+        
+        if (isset($email) && trim($email) == '') {
+
+            echo '<div class="error">Please, enter your EMAIL!</div>';
+            
+        } else if(isset($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+
+            echo '<div class="error">Enter correct email address!</div>';
+
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -46,7 +102,7 @@
                 <nav class="header__navigation">
                     <div class="header__navigation-logo">
                         <span class="title-line">
-                            <a href="./index.html">YP</a>
+                            <a href="./index.php">YP</a>
                         </span>
                         
                     </div>
@@ -417,25 +473,45 @@
                             <img src="./img/contacts/dots.png" alt="Dots" class="contacts__contact-details-img">
                         </div>
 
-                        <form class="contacts__form" action="#" method="post" id="contact-form">
+                        <form class="contacts__form" action="index.php" method="POST" id="contact-form">
+
                                 <div class="contacts__form-inputs-wrapper">
 
                                     <div class="contacts__form-item">
-                                        <input type="email" name="email" class="contacts__form-input" required>
+
+                                        <input 
+                                            type="text" 
+                                            name="email" 
+                                            class="contacts__form-input"
+                                            value="<?php printPostValue($_POST['email']); ?>"
+
+                                        >
+
                                         <span class="contacts__form-placeholder">Your email</span>
-                                        <div class="error">Enter your email</div>
+                                        <?php checkEmail($_POST['email']); ?>
                                     </div>  
 
                                     <div class="contacts__form-item">
-                                        <input type="text" name="theme" class="contacts__form-input"  required>
+
+                                        <input 
+                                            type="text" 
+                                            name="theme" 
+                                            class="contacts__form-input"
+                                            value="<?php printPostValue($_POST['theme']); ?>"
+                                        >
+
                                         <span class="contacts__form-placeholder">Message Theme</span>
-                                        <div class="error">Enter Theme of the message</div>
+                                            <?php checkValue($_POST['theme'], 'Please, enter THEME of the message!');?>
                                     </div>
 
                                     <div class="contacts__form-item">
-                                        <textarea class="contacts__form-input contacts__form-input--textarea" name="message"></textarea>
+
+                                        <textarea name="message" class="contacts__form-input contacts__form-input--textarea" name="message">
+                                            <?php printPostValue($_POST['message']); 
+                                            ?></textarea>
+
                                         <span class="contacts__form-placeholder">Message</span>
-                                        <div class="error">Enter your message</div>
+                                            <?php checkValue($_POST['message'], 'Please, enter your MESSAGE!');?>
                                     </div>
 
                                 </div>
