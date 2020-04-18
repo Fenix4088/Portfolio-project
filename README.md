@@ -11,6 +11,6 @@ This is my portfolio project, all my Web projects presented here.
 
 
  [View demo](https://fenix4088.github.io/Portfolio-project/);  
- [Real website](https://cs15388.tmweb.ru);  
+ [Real website](http://cs15388.tmweb.ru);  
  [Link to real project repository](https://github.com/Fenix4088/Portfolio-projectPHP);
  
