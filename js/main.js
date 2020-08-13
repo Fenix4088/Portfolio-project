@@ -134,14 +134,16 @@ $(document).ready(function (){
 
     // Cheking Tab key in form
     const formElement = document.querySelector('.contacts__form')
-    formElement.onkeydown = function(e){
-        if(e.keyCode == 9){
-          for (let i = 0; i < formInputs.length; i++) {
-               if(formInputs[i] === document.activeElement){
-                const thisParent = formInputs[i+1].parentElement;
-                 thisParent.querySelector('.contacts__form-placeholder').classList.add('active');
-                 
-               }
+    if (formElement !== null) {
+        formElement.onkeydown = function(e){
+            if(e.keyCode == 9){
+              for (let i = 0; i < formInputs.length; i++) {
+                   if(formInputs[i] === document.activeElement){
+                    const thisParent = formInputs[i+1].parentElement;
+                     thisParent.querySelector('.contacts__form-placeholder').classList.add('active');
+                     
+                   }
+                }
             }
         }
     }
